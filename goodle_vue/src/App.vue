@@ -11,7 +11,6 @@ export default {
 }
 </script>
 
-
 <style src="./assets/global.css"></style>
 <!--<style>-->
 <!--#app {-->
