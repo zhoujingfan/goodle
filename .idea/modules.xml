@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/goodle.iml" filepath="$PROJECT_DIR$/.idea/goodle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goodle_vue/goodle_vue.iml" filepath="$PROJECT_DIR$/goodle_vue/goodle_vue.iml" />
     </modules>
   </component>
 </project>
