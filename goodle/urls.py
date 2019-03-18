@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.goodle_web.views import index
+from goodle_web.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
