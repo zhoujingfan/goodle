@@ -13,6 +13,9 @@ export default {
 </script>
 
 <style scoped>
+.not-found {
+  text-align: center;
+}
 .not-found img{
   width: 500px;
   top: 50px;
