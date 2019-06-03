@@ -83,6 +83,7 @@ def fuzzy_search(request):
 
 def suggest(request):
     content = {}
+    print("ok")
     if request.method  == "POST":
         keyword = request.POST.get('keyword')
         if not keyword:
@@ -102,7 +103,14 @@ def suggest(request):
         }
         res_steam = es.search(index="steamindex",doc_type="steam",body=doc)
         res_wegame = es.search(index="wegameindex",doc_type="wegame",body=doc)
-
-        content['res1'] = res_steam
-        content['res2'] = res_wegame
+        result_steam = res_steam['suggest']['my-suggestion'][0]['options']
+        result_wegame = res_wegame['suggest']['my-suggestion'][0]['options']
+        res = []
+        for re in result_steam:
+            
+            res.append({'value':re['text']})
+        for re in result_wegame:
+            res.append({'value':re['text']})
+        content['code'] = 100
+        content['res'] = res
     return JsonResponse(content)
